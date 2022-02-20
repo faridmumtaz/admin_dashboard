@@ -41,8 +41,8 @@ html , body{
     padding-right: 40px;
 }
 .user1 img[src="assets/morgan.jpg"]{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
 }
 .greeting{
@@ -50,8 +50,8 @@ html , body{
     padding-left: 40px;
 }
 .greeting img{
-    height: 80px;
-    width: 80px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
 }
 .greeting .hi{
@@ -85,12 +85,6 @@ html , body{
 }
 .sidebar{
     background-color: blue;
-}
-.article{
-    border: 1px solid green;
-}
-.news{
-    border: 1px solid violet;
 }
 .dashboard{
     display: flex;
@@ -126,6 +120,43 @@ html , body{
     height: 20px;
     padding: 10px;
 }
+.article{
+    background-color: #d4d4d8;
+    padding: 10px;
+}
+.article .projects{
+    font-weight: bold;
+    margin: 5px;
+}
+.cards{
+    display: grid;
+    grid-template: repeat(3,1fr) / repeat(2,1fr);
+    grid-template-areas: 
+    "card card"
+    "card card"
+    "card card";
+    gap: 15px;
+}
+.card{
+    background-color: white;
+    border-radius: 5px;
+    border-left: 5px solid orange;
+    padding: 0px 10px;
+}
+.card .title{
+    font-weight: bold;
+    font-size: small;
+}
+.card .desc{
+    font-size: smaller;
+}
+.card .commands{
+    display: flex;
+    justify-content: end;
+}
+.news{
+    border: 1px solid violet;
+}
 
 
 
@@ -160,4 +191,7 @@ html , body{
 }
 #buttons{
     grid-area: buttons;
+}
+#card{
+    grid-area: card;
 }
