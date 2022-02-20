@@ -1,0 +1,163 @@
+html , body{
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    height: 100%;
+    display: grid;
+    grid-template: repeat(5,1fr) / repeat(5,1fr);
+    grid-template-areas: 
+    "sidebar header header header header"
+    "sidebar article article article news"
+    "sidebar article article article news"
+    "sidebar article article article news"
+    "sidebar article article article news";
+}
+.header{
+    display: grid;
+    grid-template: repeat(1,1fr) repeat(1,1fr) / repeat(1,4fr) repeat(1,2fr);
+    grid-template-areas: 
+    "searchbox user1"
+    "greeting buttons";
+}
+.searchbox{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 30px;
+}
+.searchbox input{
+    border-radius: 15px;
+    border: none;
+    background-color:#d4d4d8;
+    padding: 10px;
+    padding-left: 30px;
+}
+.user1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 40px;
+}
+.user1 img[src="assets/morgan.jpg"]{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.greeting{
+    display: flex;
+    padding-left: 40px;
+}
+.greeting img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.greeting .hi{
+    font-weight: bold;
+    margin: 0;
+}
+.greeting .username{
+    font-weight: bold;
+    font-size: x-large;
+    margin: 0;
+}
+.greet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.buttons button{
+    background-color: blue;
+    padding:10px 20px 10px 20px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    width: 80px;
+}
+.sidebar{
+    background-color: blue;
+}
+.article{
+    border: 1px solid green;
+}
+.news{
+    border: 1px solid violet;
+}
+.dashboard{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 20px;
+}
+.dashboard h1{
+    display: inline;
+    color: white;
+}
+.user, .control{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+}
+.user a, .control a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.user div, .control div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    max-height: fit-content;
+    padding-left: 50px;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#header{
+    grid-area: header;
+}
+#sidebar{
+    grid-area: sidebar;
+}
+#article{
+    grid-area: article;
+}
+#news{
+    grid-area: news;
+}
+#searchbox{
+    grid-area: searchbox;
+}
+#user1{
+    grid-area: user1;
+}
+#greeting{
+    grid-area: greeting;
+}
+#buttons{
+    grid-area: buttons;
+}
